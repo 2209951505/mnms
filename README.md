@@ -312,6 +312,7 @@ JS异步执行
 * async
 * defer
 * 动态创建JS标签 
+* dom事件，回调函数，定时器，ajax
 
 ### 23. 减少http请求次数
 
