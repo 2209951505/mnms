@@ -504,3 +504,110 @@ CSS modules
 
 移动端适配: rem-->手机机型
 
+## 第三天  
+
+```
+旭: 25分  不包含项目总街和自我介绍
+```
+
+### 1. 如何实现左右固定中间自适应
+
+flex布局
+
+浮动
+
+### 2. flex 是哪几个属性的复合属性
+
+子 flex:  flex-basis   flex-grow   flex-shrink
+
+父 flex-flow: flex-direction flex-wrap
+
+### 3. 如何完成圣杯布局效果
+
+浮动:
+
+弹性盒: 
+
+第三方UI库: `antd`提供了圣杯布局
+
+### 4. transition和 animation 和使用场景
+
+transition 属性值在一定的时间内从一个状态平滑的过渡到另一个状态。这种状态可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并平滑的以动画效果改变css的属性值，增强用户体验。
+
+animation是动画,是过渡的属性扩展,可以设置多帧过渡,
+
+### 5. 用transition实现三角形
+
+ 三角形:border  tansition配合2D旋转
+
+### 6. for in  for of 的区别
+
+1. for of 是ES6新增
+
+2.  for...in 循环主要是为了遍历对象而生，不适用于遍历数组
+
+   for...of 循环可以用来遍历数组、类数组对象，字符串、Set、Map 以及 Generator 对象 
+
+### 7. for in 和`object.keys`得到的数组区别
+
+`Object.keys()`**用于获取对象自身所有的可枚举的属性值，但不包括原型中的属性，然后返回一个由属性名组成的数组**
+
+返回的是所有能够通过对象访问的、可枚举的属性，既包括存在于实例中的属性，也包括存在于原型中的实例
+
+### 8. `ES5、ES6`遍历方法和区别
+
+数组
+
+`map filter reudce forEach`
+
+对象
+
+for in
+
+for of
+
+`Object.keys`
+
+`Object.values`
+
+`Object.getOwnPropretyNames`
+
+```
+鹿总
+```
+
+### 9.  reduce数组新增方法
+
+常用:  求和 求阶乘 数组扁平化等等
+
+两个参数 ( function( 上一次的return值,value值,索引值,数组 ){},b ) b:第一次返回callback之后的初始值
+
+### 10. `webpack` 性能优化
+
+* 按需加载
+* 配置生产环境和开发环境不同的发包方式
+* 生产环境去掉map文件
+
+### 11. 实现一个loading的特效 用动画怎么去写 写一个旋转loading大概怎么写
+
+* 使用`gif`图片
+* 用animation设置多帧 rotate旋转 
+
+### 12. css3盒模型有哪些 之间怎么进行转换
+
+IE盒模型   box-sizing
+
+标准盒子
+
+弹性盒   display
+
+```js
+王
+```
+
+### 13. 你了解的异步方法
+
+* 定时器
+
+* promise
+
