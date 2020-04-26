@@ -474,7 +474,7 @@ CSS modules
 旭
 ```
 
-冒泡  indexof set 
+冒泡  indexof   new Set()
 
 冒泡  sort
 
