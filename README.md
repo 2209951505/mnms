@@ -646,3 +646,331 @@ Object.assign()
 {...obj}
 
 JSON.parse(JSON.stringify())
+
+
+
+## 第5天
+
+### 一/所用到的接口
+
+```js
+鹿总可以对用到的接口做了解
+1.二级导航部分
+2.轮播图
+3.商品图片信息
+.
+.
+.
+```
+
+### 二/typeof返回值
+
+```js
+鹿总，function
+```
+
+### 三/左右固定 中间自适应Css布局
+
+```js
+方式1.	浮动方式
+方式2.	定位
+方式3.	flex布局
+方式4.	display：table
+方式5.	display：grid
+鹿总两种
+代码:demo1
+```
+
+### 四/css盒子模型和ie盒子区别
+
+```js
+计算宽度的方式不一样
+
+标准模型的宽度就是content宽度
+Ie模型的宽就是border+padding+内容
+
+W3C盒子在页面的宽度不包括margin+padding+border
+IE盒子在页面的宽度是margin+padding+content
+```
+
+### 五/怎么设置盒子模型
+
+```js
+box-sizing:	border-box	标准
+			content-box	IE
+            鹿总,属性值
+```
+
+### 六/重排和重绘
+
+```js
+陈旭ok
+智有强ok
+可以延展到性能优化,那些方式可以减少重排重绘,还有重排一定重绘,重绘不一定重排
+```
+
+### 七/DOM事件的级别
+
+```js
+鹿总,陈旭
+DOM的级别--面试题出现，必须要重点掌握
+     DOM1级：允许获取和操作文档的任意部分
+     DOM2级：新增加的鼠标和用户界面事件，对css的支持和遍历
+     DOM3级：增加了对文档存储、载入、验证的方法
+
+DOM事件级别,任何文档或者浏览器窗口发生的交互,都要通过绑定事件进行交互
+事件有DOM0,DOM2和DOM3
+     DOM0级：规定了行内事件的绑定
+     DOM2级：新增加了通过addEventListener来绑定事件,还有ie下面的通过attachEvent来进行绑定
+     DOM3级：新增了一些事件（例如移动端中的一些事件）
+```
+
+### 八/捕获冒泡顺序,Dom事件模型
+
+```js
+ 鹿总,不了解Dom事件模型:捕获和冒泡
+ 	捕获,由外向内
+	冒泡,由内向外
+```
+
+### 九/常用的HTTP状态码
+
+```js
+陈旭，鹿总，智有强
+```
+
+### 十/创建对象的几种方法
+
+### 十一/call apply bind的区别
+
+### 十二/promise的优缺点，什么是generator函数,generator函数和async/await区别
+
+```js
+王慧妍
+```
+
+### 十三/手写一个sleep函数
+
+```js
+/**
+ * sleep函数
+ */
+const sleep = (time) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+  })
+}
+```
+
+### 十四/本地存储和cookie的区别
+
+```js
+陈旭，本地存储包含那些不了解
+```
+
+### 十五/为什么产生了跨域/跨域产生的原因
+
+智友强，关键字**同源策略**
+
+```js
+因为浏览器的同源策略,
+    
+什么是同源策略,协议域名端口号一致,一个不一致就会产生跨域
+```
+
+### 十六开发当中常用的跨域解决方式
+
+```js
+https://github.com/2209951505/mnms#5%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E7%9A%84%E6%96%B9%E5%BC%8F
+```
+
+### 十七/什么是原型链
+
+### 十八/什么是闭包
+
+```js
+陈旭
+```
+
+### 十九/什么情况产生内存泄漏
+
+```js
+1.变量未回收
+邱航,智有强
+2.定时器未及时清除
+3.闭包不当使用
+
+一个未声明变量的引用会在全局对象中创建一个新的变量。在浏览器的环境下，全局对象就是 window，也就是说：
+
+function foo(arg) {
+    bar = "aaaaa";
+}
+实际上等价于
+function foo(arg) {
+    window.bar = "aaaaa";
+}
+function foo() {
+    this.variable = "qqqqq";
+}
+//this 指向全局对象（window）
+foo();
+ 为了防止这种错误的发生，添加 'use strict'; 语句
+```
+
+### 二十/防抖节流
+
+### 二一/判断一个元素是否是数组
+
+```js
+* 正确:
+1.Array.isArray()
+2.Object.prototype.toString().call()	邱航
+3.instanceof	let a = [];		a instanceof Array; //true
+		
+
+* 反例
+typeof arr //Object
+
+Object.prototype.toString().call()补充--补充---补充---补充----补充--补充--补充--补充---------
+
+Object.prototype.toString().call()可以获取到对象的不同类型，例如
+
+let a = [1,2,3]
+Object.prototype.toString.call(a) === '[object Array]';//true
+它强大的地方在于不仅仅可以检验是否为数组，比如是否是一个函数，是否是数字等等
+
+//检验是否是函数
+let a = function () {};
+Object.prototype.toString.call(a) === '[object Function]';//true
+//检验是否是数字
+let b = 1;
+Object.prototype.toString.call(a) === '[object Number]';//true
+```
+
+### 二二/map和forEach的区别
+
+```js
+相同点
+每次执行匿名函数都支持三个参数，参数分别为item（当前每一项），index（索引值），arr（原数组）
+第三个参数用法未找到
+区别
+forEach()方法不会返回执行结果，而是undefined。
+也就是说，如果需要的话,除了遍历,forEach()有能力修改原来的数组。
+而map()方法会得到一个新的数组并返回。
+```
+
+### 二三/get和post的区别
+
+```js
+1.是否密文
+2.发送次数
+3.是否在url显示(陈旭这处少)
+```
+
+### 二四/模块化和组件化的区别
+
+```js
+组件化：把一个模块划分成一个一个小的内容，例如：轮播图，二级导航。
+
+模块化：把功能划分成一个模块，重心在设计和开发阶段
+```
+
+### 二五/git 常用命令 
+
+### 二六/sass less	的区别
+
+```js
+智有强
+```
+
+### 二七/异步操作有那些
+
+```js
+延时器
+ajax
+promise
+generator
+async/await
+
+陈旭,没有说出来es6
+```
+
+### 二八/事件委托
+
+### 二九/常用的数组方法
+
+```js
+pop	  	尾部删除 
+push	尾部添加
+shift	头部删除
+unshift 头部添加
+map foreach filter concat splice slice
+concat：连接多个数组，返回新的数组
+join：将数组中所有元素以参数作为分隔符放入一个字符
+
+那些方法会改变原来的数组,王慧妍
+sort()：对数组排序
+reverse()：数组反转
+splice(index, howmany, 新数据)：返回被删除元素所组成的数组。用于插入、删除或替换数组的元素
+```
+
+### 三十/取消冒泡事件的方法
+
+```js
+陈旭,忘记
+chrome->e.stopPropagation
+ie->cancelBubble
+```
+
+### 三一/阻止默认事件的方法
+
+
+
+
+
+
+
+
+
+
+
+### 一/移动端适配
+
+```js
+智有强，关键词rem,用的较少
+
+答:使用的是rem+js和媒体查询来做适配
+rem是css3新出的单位，根据html根元素字体大小来对元素的宽度进行计算,默认16px，
+可以根据js来进行动态计算
+
+js+rem,代码:demo2
+```
+
+### 二/display：flex的属性
+
+```js
+王慧妍，英文
+陈旭,英文,父子各6个没记住
+```
+
+### 三/垂直居中的方式,水平居中的方式
+
+```js
+智有强
+陈旭，顺序混乱
+```
+
+### 四/flex 是哪几个属性的复合属性
+
+```js
+子 flex: flex-basis flex-grow flex-shrink
+
+父 flex-flow: flex-direction flex-wrap
+
+智有强	flex的复合属性
+```
+
+```js
+邱航，问具体一点的问题
+```
+
