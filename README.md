@@ -108,7 +108,7 @@
 
 ```js
 git init	陈旭-create
-git add *	添加到暂存区
+git add .	添加到暂存区
 git commit -m "注释内容"
 git push origin master
 ```
@@ -398,7 +398,11 @@ push pop shift unshift map foreach filter concat splice slice
 小王
 ```
 
-Array.isArray    instanceof     Object.prototype.toString.call([])
+Array.isArray    `例：Array.isArray(x1)`
+
+instanceof     `例：x1 instanceof Array`
+
+Object.prototype.toString.call([])    `例：Object.prototype.toString.call(x1)`
 
 ### 30. 输入url到加载完
 
@@ -595,9 +599,9 @@ for of
 
 ### 12. css3盒模型有哪些 之间怎么进行转换
 
-IE盒模型   box-sizing
+IE盒模型   box-sizing:border-box
 
-标准盒子
+标准盒子   box-sizing:content-box
 
 弹性盒   display
 
